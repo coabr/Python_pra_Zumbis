@@ -1,3 +1,6 @@
+import sys
+import math
+
 def quest1():
        
     """
@@ -69,17 +72,18 @@ def quest4():
     """
     Faça um Programa que leia três números e mostre o maior deles.
     """
+    
     num1 = int(input("Digite o primeiro número: "))
     num2 = int(input("Digite o segundo número: "))
     num3 = int(input("Digite o terceiro número: "))
     
-    maior = 0
+    maior = -sys.maxsize
     
-    if num1>maior:
+    if num1 > maior:
         maior = num1
-        if num2>maior:
+        if num2 > maior:
             maior = num2
-            if num3>maior:
+            if num3 > maior:
                 maior= num3
     print ("O maior número é o: %d" %maior)
     
@@ -139,8 +143,7 @@ def quest7():
     Informe ao usuário a quantidades de latas de tinta a serem compradas e o preço total.
     Obs. : somente são vendidos um número inteiro de latas.
     """
-    import math 
-    
+
     area = int(input("Qual o tamanho em metros da área a ser pintada? "))
     
     paint = area/3
@@ -157,7 +160,7 @@ if __name__ == '__main__':
     #quest1()
     #quest2()
     #quest3()
-    #quest4()
+    quest4()
     #quest5()
     #quest6()
     #quest7()
