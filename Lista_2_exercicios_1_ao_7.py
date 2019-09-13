@@ -14,7 +14,7 @@ def quest1():
     ladoC = int(input("Digite o valor do lado C: "))
 
     if abs(ladoA-ladoB) < ladoC < ladoA+ladoB and abs(ladoB-ladoC) < ladoA < ladoB+ladoC and abs(ladoA-ladoC) < ladoB < ladoA+ladoC:
-        if ladoA == ladoB and ladoB==ladoC and ladoC==ladoA:
+        if ladoA == ladoB ==ladoC:
             print ("O triângulo é equilátero!")
         elif ladoA == ladoB or ladoB==ladoC or ladoA==ladoC:
                 print ("O triângulo é isósceles!")
@@ -152,8 +152,7 @@ def quest7():
             
     price = gallons*80
     
-    print("Você irá precisar de %d galões de tinta." %gallons)
-    print("Você irá gastar R$ %d." %price)
+    print("Você irá precisar de %d galões de tinta e irá gastar R$ %d." %(gallons, price))
 
         
 if __name__ == '__main__':
