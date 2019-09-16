@@ -28,7 +28,7 @@ def quest2():
     usuario = input("Digite seu usuário: ").upper()
     while True:
         senha = input("Digite uma senha de 6 dígitos: ").upper()
-        if senha not in usuario:
+        if senha != usuario:
             print("Credenciais salvas.")
             break
         else:
@@ -67,21 +67,33 @@ def quest4():
     soma dos dois anteriores. Faça um algoritmo que leia um número inteiro calcule o seu número
     de Fibonacci. F1 = 1, F2 = 1, F3 = 2, etc.
     '''
-    n1, n2 = 1, 1
+    n = int(input("Número: "))
+    a, b = 1, 1
+    contador = 1
     
+    while contador < n-2:
+        a, b = b, a+b
+        contador += 1
+        
+    print ("Fibonacci(%d): %d" %(n,b))
     
-    
-
-
 def quest5(): 
     '''
     Dados dois números inteiros positivos, determinar o máximo divisor comum entre eles usando
     o algoritmo de Euclides.
     '''
+    num1 = int(input("Digite o valor de a: "))
+    num2 = int(input("Digite o valor de b: "))
 
+    
+    while num1 % num2 != 0:
+        num1, num2 = num2, num1%num2
+        
+    print("O MDC de a e b é %d" %num2)   
+    
 if __name__ == '__main__':
     #quest1()
     #quest2()
     #quest3()
-    quest4()
+    #quest4()
     #quest5()
